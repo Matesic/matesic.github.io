@@ -140,8 +140,8 @@ export const Home = () => {
                                 <Row key={skillCategory.name} className='pb-3 pb-md-3'>
                                     {i > 0 && <Container className='divider d-flex d-md-none bg-secondary'/>}
                                     {skillCategory.skills.map((skill, j) =>
-                                        <Col xs={6} md={3} className='pt-3 pb-md-0'>
-                                            <span key={skill.name} className='d-flex flex-column align-items-center gap-1 fs-5'>
+                                        <Col key={skill.name} xs={6} md={3} className='pt-3 pb-md-0'>
+                                            <span className='d-flex flex-column align-items-center gap-1 fs-5'>
                                                     <Icon
                                                         color={`hsl(${Math.sqrt(i * i + j * j) * 30 + timer}, 100%, 50%)`}
                                                         size='2rem' icon={skill.icon}

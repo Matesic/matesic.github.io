@@ -19,7 +19,7 @@ export const ContactForm = () => {
 
     useEffect(() => {
         checkEmailSentExpiry();
-    }, []);
+    });
 
     const handleSubmit = (event) => {
         event.preventDefault();

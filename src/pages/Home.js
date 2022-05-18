@@ -18,7 +18,7 @@ export const Home = () => {
         if (!isRunning) {
             start();
         }
-    }, []);
+    });
 
     return (
         <Container className='px-3 px-md-0'>

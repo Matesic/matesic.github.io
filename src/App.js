@@ -7,7 +7,7 @@ import {MainLayout} from './components/MainLayout';
 
 function App() {
 
-    init('vD4_rNE89yuN-e3ke');
+    init(process.env.REACT_APP_EMAILJS_TOKEN);
 
     return (
         <MainLayout>

@@ -49,7 +49,7 @@ export const ContactForm = () => {
             message: message.value
         }
 
-        send('service_8xrxgpq', 'template_6hzpyda', templateParams, 'vD4_rNE89yuN-e3ke')
+        send('service_8xrxgpq', 'template_6hzpyda', templateParams)
             .then(() => {
                 setEmailSentExpiry();
                 openAlert('success', 'Message sent!');

@@ -67,7 +67,7 @@ export const Home = () => {
                 </Col>
             </Row>
             <Row className='pb-5 justify-content-center'>
-                <Col xs={12} sm={10} md={8} xl={6} className='pb-5 pb-xl-0'>
+                <Col xs={12} lg={8} xl={6} className='pb-5 pb-xl-0'>
                     <Card id='education' border='success'>
                         <Card.Header className='fs-4 text-center bg-success text-white'>Education</Card.Header>
                         <Card.Body>
@@ -76,7 +76,7 @@ export const Home = () => {
                                     <Figure>
                                         <Figure.Image
                                             width={100}
-                                            src='images/algebra.png'/>
+                                            src='images/icons/algebra.png'/>
                                     </Figure>
                                     <Container fluid className='d-flex flex-column'>
                                         <span className='fs-6 fw-bold me-2'>2020 - 2023</span>
@@ -91,7 +91,7 @@ export const Home = () => {
                                     <Figure>
                                         <Figure.Image
                                             width={100}
-                                            src='images/fer.png'/>
+                                            src='images/icons/fer.png'/>
                                     </Figure>
                                     <Container fluid className='d-flex flex-column'>
                                         <span className='fs-6 fw-bold me-2'>2018 - 2020</span>
@@ -106,7 +106,7 @@ export const Home = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col xs={12} sm={10} md={8} xl={6}>
+                <Col xs={12} lg={8} xl={6}>
                     <Card id='experience' border='primary'>
                         <Card.Header className='fs-4 text-center bg-primary text-white'>Experience</Card.Header>
                         <Card.Body>
@@ -115,7 +115,7 @@ export const Home = () => {
                                     <Figure>
                                         <Figure.Image
                                             width={100}
-                                            src='images/biss.png'/>
+                                            src='images/icons/biss.png'/>
                                     </Figure>
                                     <Container fluid className='d-flex flex-column'>
                                         <span className='fs-6 fw-bold me-2'>2021 -</span>

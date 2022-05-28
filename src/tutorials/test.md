@@ -1,7 +1,11 @@
+[title]:# (Test)
+[description]:# (This is a test tutorial)
+[thumbnail]:# (images/icons/biss.png)
+[published]:# (2022-05-28)
 ## Hello World 
 *Test tutorial*
 
-![Image](images/logo/logo-light.png)
+![Image](images/loading.gif)
 
 [Home](https://matesic.github.io)
 ***
@@ -60,7 +64,7 @@ These features **do not work by default**.
 | Feature    | Support              |
 | ---------: | :------------------- |
 | CommonMark | 100%                 |
-| GFM        | 100% w/ `remark-gfm` |
+| ![Image]()        | 100% w/ `remark-gfm` |
 
 ~~strikethrough~~
 

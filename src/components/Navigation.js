@@ -16,8 +16,8 @@ export const Navigation = () => {
                     <Navbar.Toggle aria-controls='collapse-navbar'/>
                     <Navbar.Collapse id='collapse-navbar' className='justify-content-end me-5'>
                         <Nav className='text-center'>
-                            <Nav.Link as={Link} to='/' className='d-block d-md-none'>Home</Nav.Link>
-                            <Nav.Link as={Link} to='/tutorials'>Tutorials</Nav.Link>
+                            <Nav.Link as={Link} to='/' eventKey='1' className='d-block d-md-none'>Home</Nav.Link>
+                            <Nav.Link as={Link} to='/tutorials' eventKey='2'>Tutorials</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

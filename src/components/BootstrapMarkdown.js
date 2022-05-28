@@ -1,5 +1,7 @@
 import remarkGfm from 'remark-gfm';
 import remarkToc from 'remark-toc';
+import rehypeRaw from 'rehype-raw';
+import rehypeSanitize from 'rehype-sanitize';
 import rehypeSlug from 'rehype-slug';
 import PropTypes from 'prop-types';
 import {Table} from 'react-bootstrap';
@@ -12,11 +14,11 @@ export const BootstrapMarkdown = (props) => {
         <ReactMarkdown
             children={props.markdown}
             remarkPlugins={[remarkGfm, remarkToc]}
-            rehypePlugins={[rehypeSlug]}
+            rehypePlugins={[rehypeRaw, rehypeSanitize, rehypeSlug]}
             components={{
                 table({children}) {
                     return (
-                        <Table striped bordered hover responsive>
+                        <Table striped bordered responsive>
                             {children}
                         </Table>
                     );

@@ -1,45 +1,23 @@
 import {Card, Col, Container, Figure, Row} from 'react-bootstrap';
 import React, {useEffect, useState} from 'react';
+import {loadedTutorials} from '../data/tutorials';
+import {Link} from 'react-router-dom';
+import imgLoading from '../assets/images/loading.gif'
 
 export const Tutorials = () => {
     const [tutorials, setTutorials] = useState([]);
     const locale = navigator.languages !== undefined ? navigator.languages[0] : navigator.language;
 
     useEffect(() => {
-        const context = require.context('../tutorials', false, /\.md$/);
+        if (loadedTutorials.length <= 0) {
+            setTimeout(() => {
+                setTutorials(loadedTutorials);
+            }, 1000);
+            return;
+        }
 
-        context.keys().forEach(fileName => {
-            const moduleName = fileName.replace(/(\.)/, '');
-
-            if (tutorials.findIndex(t => t.fileName === fileName) !== -1) {
-                return;
-            }
-
-            import('../tutorials' + moduleName)
-                .then(module => {
-                    fetch(module.default)
-                        .then(res => res.text())
-                        .then(md => {
-                            const title = md.match(/\[title]:\s*#\s*\((.*?)\)/);
-                            const description = md.match(/\[description]:\s*#\s*\((.*?)\)/);
-                            const thumbnail = md.match(/\[thumbnail]:\s*#\s*\((.*?)\)/);
-                            const publishedDate = md.match(/\[published]:\s*#\s*\((.*?)\)/);
-                            const content = md.replace(/'/, '\\\'');
-                            setTutorials([...tutorials, {
-                                fileName: fileName,
-                                title: title[1],
-                                description: description[1],
-                                thumbnail: thumbnail[1],
-                                publishedDate: new Date(publishedDate[1]),
-                                content: content
-                            }]);
-                        });
-                });
-        });
-
-        const sorted = tutorials.sort((t1, t2) => t1.publishedDate.getTime() > t2.publishedDate.getTime());
-        setTutorials(sorted);
-    });
+        setTutorials(loadedTutorials);
+    }, []);
 
     return (
         <Container>
@@ -49,31 +27,37 @@ export const Tutorials = () => {
                     programming and algorithm principles.</span>
             </Container>
             <Row>
-                {tutorials.map(tutorial =>
-                    <Col xs={12} md={6} lg={4} xl={3} key={tutorial.title} className='pb-3'>
-                        <Card>
-                            <Card.Body>
-                                <Figure>
-                                    <Figure.Image width={100} src={tutorial.thumbnail} alt={tutorial.title}/>
-                                </Figure>
-                                <hr/>
-                                <Card.Title>
-                                    {tutorial.title}
-                                </Card.Title>
-                                <Card.Text>
-                                    {tutorial.description}
-                                </Card.Text>
-                            </Card.Body>
-                            <Card.Footer className='text-muted text-center'>
-                                {tutorial.publishedDate.toLocaleDateString(locale)}
-                            </Card.Footer>
-                        </Card>
+                {tutorials.length <= 0
+                    ? <Col xs={12} className='d-flex justify-content-center'>
+                        <Figure>
+                            <Figure.Image width={100} src={imgLoading} alt='loading'/>
+                        </Figure>
                     </Col>
-                )}
+                    : tutorials.map(tutorial =>
+                        <Col xs={12} md={6} lg={6} xl={4} xxl={3} key={tutorial.title} className='pb-3'>
+                            <Card>
+                                <Card.Body>
+                                    <Container as={Link} to={'/tutorials/' + tutorial.title} className='d-flex justify-content-center'>
+                                        <Figure>
+                                            <Figure.Image width={100} src={tutorial.thumbnail} alt={tutorial.title}/>
+                                        </Figure>
+                                    </Container>
+                                    <hr/>
+                                    <Card.Title as={Link} to={'/tutorials/' + tutorial.title} className='fs-4'>
+                                        {tutorial.title}
+                                    </Card.Title>
+                                    <Card.Text>
+                                        {tutorial.description}
+                                    </Card.Text>
+                                </Card.Body>
+                                <Card.Footer className='text-muted text-center'>
+                                    {tutorial.publishedDate.toLocaleDateString(locale)}
+                                </Card.Footer>
+                            </Card>
+                        </Col>
+                    )
+                }
             </Row>
         </Container>
-        // <Container className='bg-light py-3 my-3'>
-        //     <BootstrapMarkdown markdown={markdown.content}/>
-        // </Container>
     );
 }

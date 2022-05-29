@@ -1,6 +1,7 @@
 import React from 'react';
 import {Container, Nav, Navbar} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import logo from '../assets/images/logo/logo-light.png';
 
 export const Navigation = () => {
     return (
@@ -9,7 +10,7 @@ export const Navigation = () => {
                 <Container fluid className='px-1 px-md-3 px-xl-5'>
                     <Navbar.Brand as={Link} to='/'>
                         <Container fluid className='d-flex gap-2 align-items-center unselectable py-0'>
-                            <img src={'images/logo/logo-light.png'} alt='logo' className='non-draggable' style={{width: '2rem'}}/>
+                            <img src={logo} alt='logo' className='non-draggable' style={{width: '2rem'}}/>
                             <span className='fs-4'>Fran Matešić</span>
                         </Container>
                     </Navbar.Brand>

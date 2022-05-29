@@ -3,6 +3,7 @@ import {Col, Container, Navbar, Row} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {BsBoxArrowUpRight, BsGithub, BsLinkedin} from 'react-icons/bs';
 import {Icon} from './Icon';
+import logo from '../assets/images/logo/logo-light.png';
 
 const Footer = () => {
     return (
@@ -37,7 +38,7 @@ const Footer = () => {
                     </Col>
                     <Col xs={12} md={6} className='d-flex justify-content-center align-items-center flex-column'>
                         <Navbar.Brand as={Link} to='/' className='d-flex align-items-center gap-1'>
-                            <img src={'images/logo/logo-light.png'} alt='logo' className='non-draggable' style={{width: '2.25rem'}}/>
+                            <img src={logo} alt='logo' className='non-draggable' style={{width: '2.25rem'}}/>
                             <span className='text-secondary fs-3'>
                                 Fran Matešić
                             </span>

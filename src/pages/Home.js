@@ -6,6 +6,9 @@ import {Icon} from '../components/Icon';
 import {Link} from 'react-router-dom';
 import {skills} from '../data/skills';
 import {useInterval} from '../hooks/useInterval';
+import imgAlgebra from '../assets/images/algebra.png';
+import imgFer from '../assets/images/fer.png';
+import imgBiss from '../assets/images/biss.png';
 
 export const Home = () => {
     const [start, , isRunning] = useInterval(() => {
@@ -76,7 +79,7 @@ export const Home = () => {
                                     <Figure>
                                         <Figure.Image
                                             width={100}
-                                            src='images/icons/algebra.png'/>
+                                            src={imgAlgebra}/>
                                     </Figure>
                                     <Container fluid className='d-flex flex-column'>
                                         <span className='fs-6 fw-bold me-2'>2020 - 2023</span>
@@ -91,7 +94,7 @@ export const Home = () => {
                                     <Figure>
                                         <Figure.Image
                                             width={100}
-                                            src='images/icons/fer.png'/>
+                                            src={imgFer}/>
                                     </Figure>
                                     <Container fluid className='d-flex flex-column'>
                                         <span className='fs-6 fw-bold me-2'>2018 - 2020</span>
@@ -115,7 +118,7 @@ export const Home = () => {
                                     <Figure>
                                         <Figure.Image
                                             width={100}
-                                            src='images/icons/biss.png'/>
+                                            src={imgBiss}/>
                                     </Figure>
                                     <Container fluid className='d-flex flex-column'>
                                         <span className='fs-6 fw-bold me-2'>2021 -</span>

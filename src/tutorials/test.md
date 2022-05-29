@@ -1,11 +1,11 @@
 [title]:# (Test)
 [description]:# (This is a test tutorial)
-[thumbnail]:# (images/icons/biss.png)
+[thumbnail]:# (images/tutorials/profile.png)
 [published]:# (2022-05-28)
 ## Hello World 
 *Test tutorial*
 
-![Image](images/loading.gif)
+![Image](../images/tutorials/profile.png)
 
 [Home](https://matesic.github.io)
 ***

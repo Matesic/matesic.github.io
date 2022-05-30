@@ -1,12 +1,12 @@
 [title]:# (Title)
 [description]:# (Description)
 [thumbnail]:# (images/tutorials/thumbnail.png)
-[published]:# (2022-01-01)
+[published]:# (2022-05-30)
 
 <!-- DO NOT CHANGE UNDER -->
 <div align="center">
     <h1>TITLE</h1>
-    <img src="../THUMBNAIL" alt="thumbnail"/>
+    <img src="../../THUMBNAIL" alt="thumbnail"/>
     <p>DESCRIPTION</p>
 </div>
 
@@ -22,3 +22,9 @@
 
 <!-- DO NOT CHANGE ABOVE -->
 ### Content 1
+
+<br/>
+<div align="center">
+    <a href="#top">Back to the top</a>
+</div>
+<br/>

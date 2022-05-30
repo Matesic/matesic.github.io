@@ -6,13 +6,13 @@ import {Home} from './pages/Home';
 import {Error} from './pages/Error';
 import {Tutorials} from './pages/Tutorials';
 import {Tutorial} from './pages/Tutorial';
-import {loadTutorials} from './data/tutorials';
+import {loadTutorialData} from './data/tutorials';
 
 function App() {
     init(process.env.REACT_APP_EMAILJS_TOKEN);
 
     useEffect(() => {
-        loadTutorials();
+        loadTutorialData();
     }, []);
 
     return (
@@ -20,7 +20,7 @@ function App() {
             <Routes>
                 <Route exact path='/' element={<Home/>}/>
                 <Route path='/tutorials' element={<Tutorials/>}/>
-                <Route path='/tutorials/:title' element={<Tutorial/>}/>
+                <Route path='/tutorials/:category/:title' element={<Tutorial/>}/>
                 <Route path='*' element={<Error/>}/>
             </Routes>
         </MainLayout>

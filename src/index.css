@@ -24,6 +24,12 @@ a {
     transform: scale(1.2);
 }
 
+.popover-arrow {
+    display: none !important;
+}
+
+
+
 .figure {
     margin-bottom: 0;
 }

@@ -9,7 +9,7 @@ export const TooltipButton = (props) => {
     const buttonClick = () => {
         setShowTooltip(true);
         target.current?.blur();
-        setTimeout(() => setShowTooltip(false), 1000);
+        setTimeout(() => setShowTooltip(false), 1500);
 
         props.onClick && props.onClick();
     }

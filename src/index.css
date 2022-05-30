@@ -28,7 +28,13 @@ a {
     display: none !important;
 }
 
+[data-rmiz-btn-open] {
+    cursor: zoom-in !important;
+}
 
+[data-rmiz-btn-close] {
+    cursor: zoom-out !important;
+}
 
 .figure {
     margin-bottom: 0;

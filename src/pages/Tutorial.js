@@ -21,7 +21,7 @@ export const Tutorial = () => {
 
     const findAndSetMarkdown = () => {
         if (tutorialData.has(category)) {
-            const tutorial = tutorialData.get(category).tutorials.find(t => t.title === title);
+            const tutorial = tutorialData.get(category).tutorials.find(t => t.title === title.replace(/_/g, ' '));
             if (tutorial !== undefined && tutorial !== null) {
                 setMarkdown(tutorial);
                 return;

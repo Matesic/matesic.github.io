@@ -1,12 +1,16 @@
 [title]:# (Title)
 [description]:# (Description)
-[thumbnail]:# (images/tutorials/thumbnail.png)
+[thumbnail]:# (thumbnail.png)
+[author]:# (Fran Matešić)
 [published]:# (2022-05-30)
+
+<!-- USE DIR FOR IMAGE DIRECTORY -->
+<!-- USE title="zoom" FOR ZOOMING IMAGES -->
 
 <!-- DO NOT CHANGE UNDER -->
 <div align="center">
     <h1>TITLE</h1>
-    <img src="../../THUMBNAIL" alt="thumbnail"/>
+    <img src="DIR/THUMBNAIL" alt="thumbnail"/>
     <p>DESCRIPTION</p>
 </div>
 
@@ -14,6 +18,7 @@
 
 <div align="end">
     <i>Published on</i> PUBLISHED_DATE
+    <p>by AUTHOR</p>
 </div>
 
 ### Table of contents
@@ -25,6 +30,6 @@
 
 <br/>
 <div align="center">
-    <a href="#top">Back to the top</a>
+    <h5><a href="#top">Back to top</a></h5>
 </div>
 <br/>

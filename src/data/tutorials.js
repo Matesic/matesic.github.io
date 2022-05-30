@@ -51,18 +51,26 @@ const loadMarkdown = (fileName, moduleName, category, pathCategory) => {
                     const title = md.match(/\[title]:\s*#\s*\((.*?)\)/)[1];
                     const description = md.match(/\[description]:\s*#\s*\((.*?)\)/)[1];
                     const thumbnail = md.match(/\[thumbnail]:\s*#\s*\((.*?)\)/)[1];
+                    const author = md.match(/\[author]:\s*#\s*\((.*?)\)/)[1];
                     const publishedDate = md.match(/\[published]:\s*#\s*\((.*?)\)/)[1];
+
+                    const directory = `/images/tutorials/${moduleName.replace(category, '').replace('.md', '').replace('//', '')}`;
+
                     const content = md.replace(/'/, '\\\'')
                         .replace(/TITLE/, title)
                         .replace(/DESCRIPTION/, description)
-                        .replace(/THUMBNAIL/, thumbnail)
+                        .replace(/DIR/g, directory)
+                        .replace(/THUMBNAIL/, `/${thumbnail}`)
+                        .replace(/AUTHOR/, author)
                         .replace(/PUBLISHED_DATE/, new Date(publishedDate).toLocaleDateString(locale));
+
                     const tutorial = {
                         fileName: fileName,
                         category: category,
                         title: title,
                         description: description,
-                        thumbnail: thumbnail,
+                        thumbnail: `${directory}/${thumbnail}`,
+                        author: author,
                         publishedDate: new Date(publishedDate),
                         content: content
                     };

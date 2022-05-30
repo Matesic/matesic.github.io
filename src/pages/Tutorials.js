@@ -30,10 +30,10 @@ export const Tutorials = () => {
     const renderTutorial = (value) => {
         return (
             <Col xs={12} md={6} lg={6} xl={4} xxl={3} key={value.fileName} className='pb-3'>
-                <Card>
+                <Card border='dark'>
                     <Card.Body>
                         <Container as={Link}
-                                   to={'/tutorials/' + value.category.toLowerCase() + '/' + value.title}
+                                   to={'/tutorials/' + value.category.toLowerCase() + '/' + value.title.replace(/ /g, '_')}
                                    className='d-flex justify-content-center'>
                             <Figure>
                                 <Figure.Image width={100} src={value.thumbnail} alt={value.title}/>
@@ -41,7 +41,7 @@ export const Tutorials = () => {
                         </Container>
                         <hr/>
                         <Card.Title as={Link}
-                                    to={'/tutorials/' + value.category.toLowerCase() + '/' + value.title}
+                                    to={'/tutorials/' + value.category.toLowerCase() + '/' + value.title.replace(/ /g, '_')}
                                     className='fs-4'>
                             {value.title}
                         </Card.Title>
@@ -58,7 +58,7 @@ export const Tutorials = () => {
     }
 
     return (
-        <Container>
+        <Container className='px-3 px-md-0'>
             <Container className='d-flex flex-column align-items-center pt-3 pb-5'>
                 <span className='fs-1'>Tutorials</span>
                 <span className='fs-6'>Collection of tutorials which assume you have basic knowledge of<br/>

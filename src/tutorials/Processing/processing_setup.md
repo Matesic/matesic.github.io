@@ -1,12 +1,16 @@
 [title]:# (Processing Setup)
 [description]:# (Setup processing on your computer)
-[thumbnail]:# (images/tutorials/processing-logo.png)
+[thumbnail]:# (processing-logo.png)
+[author]:# (Fran Matešić)
 [published]:# (2022-05-30)
+
+<!-- USE DIR FOR IMAGE DIRECTORY -->
+<!-- USE title="zoom" FOR ZOOMING IMAGES -->
 
 <!-- DO NOT CHANGE UNDER -->
 <div align="center">
     <h1>TITLE</h1>
-    <img src="../../THUMBNAIL" alt="thumbnail"/>
+    <img src="DIR/THUMBNAIL" alt="thumbnail"/>
     <p>DESCRIPTION</p>
 </div>
 
@@ -14,6 +18,7 @@
 
 <div align="end">
     <i>Published on</i> PUBLISHED_DATE
+    <p>by AUTHOR</p>
 </div>
 
 ### Table of contents
@@ -30,7 +35,7 @@
 3. Start Processing application
 
 <div align="center">
-    <img src="/images/tutorials/processing-window.png" width="50%" alt="Processing window"/>
+    <img src="DIR/processing-window.png" width="600" alt="Processing window" title="zoom"/>
     <p>Processing window</p>
 </div>
 
@@ -41,7 +46,7 @@ You can open Processing settings by going to `File > Preferences`.
 Here you can set sketch (project) location, font used and more.
             
 <div align="center">
-    <img src="/images/tutorials/processing-settings.png" width="30%" alt="Processing preferences"/>
+    <img src="DIR/processing-settings.png" width="300" alt="Processing preferences" title="zoom"/>
     <p>Processing preferences</p>
 </div>
 
@@ -53,8 +58,8 @@ Here you can install libraries you want. (They are installed locally, so you can
 When you want to import a library in your sketch, go to `Sketch > Import Library` and it should be listed there to choose and import.
 If it isn't listed here as a library, try reloading the application.
 
-<div align="center">
-    <img src="/images/tutorials/processing-import-library.png" width="30%" alt="Processing libraries"/>
+<div align="center" >
+    <img src="DIR/processing-import-library.png" width="350" alt="Processing libraries" title="zoom"/>
     <p>Processing libraries</p>
 </div>
 
@@ -65,7 +70,7 @@ On `Tools` tab you can install different tools that modify Processing applicatio
 On `Modes` tab you can install different modes that allow you to write code in different languages inside Processing editor.
 
 <div align="center">
-    <img src="/images/tutorials/processing-tools.png" width="50%" alt="Processing tools"/>
+    <img src="DIR/processing-tools.png" width="550" alt="Processing tools" title="zoom"/>
     <p>Processing tools</p>
 </div>
 
@@ -104,6 +109,6 @@ implementation group: 'org.processing', name: 'core', version: '[your version]'
 
 <br/>
 <div align="center">
-    <a href="#top">Back to the top</a>
+    <h5><a href="#top">Back to top</a></h5>
 </div>
 <br/>

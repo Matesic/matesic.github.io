@@ -1,1 +1,1 @@
-Tutorials using a Java framework <a href='https://processing.org/' target='_blank'>Processing</a>
+Tutorials using a Java library <a href='https://processing.org/' target='_blank'>Processing</a>
